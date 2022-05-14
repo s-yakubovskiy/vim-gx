@@ -2,7 +2,7 @@ if exists('g:loaded_sanegx') | finish | endif
 let g:loaded_sanegx = 1
 
 function! GXBrowse(url)
-  let l:url = substitute(a:url, ".*\\(https.*\\))", "\\1", "")
+  let l:url = substitute(a:url, ".*\\(http.*\\))", "\\1", "")
   let redir = '>&/dev/null'
   if exists('g:netrw_browsex_viewer')
    let viewer = g:netrw_browsex_viewer
